@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+.header-appbar {
+  background: linear-gradient(45deg, #1A2238, #4A919E);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-toolbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 32px;
+  min-height: 64px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  animation: fadeIn 0.7s ease-out;
 }
 
-@keyframes App-logo-spin {
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.9s ease-out;
+}
+
+.header-user-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #F5F6F5;
+}
+
+.header-favorites-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #E8B923;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header-nav.open {
+  display: flex;
+}
+
+.header-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #FFFFFF !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.header-button:hover {
+  background: #4A919E;
+  border-color: #E8B923;
+  color: #FFFFFF !important;
+  transform: scale(1.03);
+}
+
+.header-switch {
+  margin-left: 24px;
+}
+
+.header-switch .MuiSwitch-track {
+  background: #F5F6F5 !important;
+  opacity: 0.5 !important;
+}
+
+.header-switch .MuiSwitch-thumb {
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.header-switch .Mui-checked .MuiSwitch-thumb {
+  background: #E8B923;
+}
+
+.header-switch .Mui-checked + .MuiSwitch-track {
+  background: #4A919E !important;
+  opacity: 0.7 !important;
+}
+
+.header-menu-icon {
+  color: #FFFFFF;
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(8px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-toolbar {
+    padding: 0 16px;
+    min-height: 56px;
+  }
+
+  .header-title {
+    font-size: 1.6rem;
+  }
+
+  .header-user {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  .header-user-text {
+    font-size: 0.9rem;
+  }
+
+  .header-favorites-count {
+    font-size: 0.8rem;
+  }
+
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    background: #1A2238;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .header-button {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header-switch {
+    margin-left: 16px;
+  }
+
+  .header-menu-icon {
+    display: block;
   }
 }

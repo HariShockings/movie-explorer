@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# MovieFlix
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Overview
+
+MovieFlix is a responsive movie discovery application built with React. It uses a third-party Movie API to fetch and display a wide variety of movies. Key features include user authentication, dynamic theming, filtering, infinite scrolling, and wishlist management, all integrated with Firebase and deployed on Vercel.
+
+## Features Implemented
+
+- Dark and light mode toggle\
+- Movie wishlist functionality\
+- New arrivals and trending movies\
+- User preference–based movie recommendations\
+- Search and filter functionality\
+- Infinite scroll and on-scroll content loading\
+- Mobile responsive layout\
+- Firebase Authentication setup\
+- Firestore database integration\
+- Hosting with Vercel
 
 ## Available Scripts
 
